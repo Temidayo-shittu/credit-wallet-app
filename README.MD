@@ -79,14 +79,16 @@
 
 
 ### Entity Relationship Diagram(ERD)
+
   +------------------+       +---------------------+      +-------------------+
   |       User       |       |       Account       |      |       Wallet      |
   +------------------+       +---------------------+      +-------------------+
   | id (PK)          |<----->| id (PK)             |      | id (PK)           |
   | fullname         |       | accName             |      | amount            |
   | email            |       | bankAccount         |      | transactionType   |
-  | password         |       | accBalance          |      | receiverAccountId (FK)   |
-  +------------------+       | user_id (FK)        |      +-------------------+
+  | password         |       | accBalance          |      | senderAccountId (FK)|
+  +------------------+       | senderAccountId (FK)|      | receiverAccountId (FK)|
+                             | receiverAccountId (FK) |  +-------------------+
                              +---------------------+
 
 
